@@ -1,0 +1,47 @@
+<mvc:View
+    controllerName="testccapp1.controller.Home"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:grid="sap.ui.layout"
+>
+    <Page id="page">
+        <content>
+            <VBox
+                id="searchFormBox"
+                class="sapUiSmallMargin"
+                alignItems="Center"
+                justifyContent="Center"
+            >
+                <Title
+                    id="searchFormTitle"
+                    text="Find my Weather"
+                    level="H2"
+                />
+
+                <HBox id="searchFormHBox">
+                    <Input
+                        id="cityInput"
+                        placeholder="e.g., New York"
+                    />
+
+                    <ToolbarSpacer
+                        id="searchFormSpacer"
+                        width="1rem"
+                    />
+                    <Button
+                        id="searchBtn"
+                        text="Search"
+                        press="loadWeather"
+                    />
+                </HBox>
+            </VBox>
+
+            <grid:Grid
+                id="weatherGrid"
+                defaultSpan="L3 M6 S12"
+                width="100%"
+            />
+        </content>
+    </Page>
+</mvc:View>
